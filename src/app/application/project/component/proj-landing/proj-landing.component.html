@@ -1,0 +1,6 @@
+<button (click)="addProject()">Create Project</button>
+
+<div>
+    <app-proj-list *ngFor="let proj of getProjectList(); let i=index" [name]="proj" (delete)="deleteHandler(i)">
+    </app-proj-list>
+</div>

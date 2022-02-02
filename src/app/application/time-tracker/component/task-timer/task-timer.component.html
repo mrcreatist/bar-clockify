@@ -1,0 +1,14 @@
+<p>task-timer works!</p>
+<input #taskName>
+
+<button mat-icon-button [matMenuTriggerFor]="menu" aria-label="Example icon-button with a menu" (click)="getList()">
+    projects
+</button>
+<mat-menu #menu="matMenu">
+    <button mat-menu-item *ngFor="let item of projList" (click)="setProj(item)">{{item}}</button>
+</mat-menu>
+
+<p>{{timer}}</p>
+
+<button (click)="addTask(taskName.value)">Start</button>
+<button (click)="endTask()">End</button>

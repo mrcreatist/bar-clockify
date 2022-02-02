@@ -1,0 +1,4 @@
+<div class="btn_grp">
+    <button *ngFor="let item of menu" mat-raised-button color="primary"
+        (click)="goToRoute(item.path)">{{item.name}}</button>
+</div>

@@ -1,0 +1,6 @@
+<app-task-timer (stop)="stopHandler($event)"></app-task-timer>
+
+
+<div>
+    <app-timed-tasks *ngFor="let item of data" [item]="item"></app-timed-tasks>
+</div>
