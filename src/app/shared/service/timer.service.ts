@@ -18,7 +18,7 @@ export class TimerService {
     this.addToLocal();
   }
   getProject() {
-    return JSON.parse(this.fromLocal());
+    return this.fromLocal() ? JSON.parse(this.fromLocal()) : null;
   }
 
   addToLocal() {
